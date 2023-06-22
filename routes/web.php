@@ -8,4 +8,3 @@ Route::get('/cart', [PizzaController::class, 'cart']);
 Route::post('/cart', [PizzaController::class, 'addToCart']);
 Route::post('/cart/remove', [PizzaController::class, 'removeFromCart']);
 Route::get('/checkout', [PizzaController::class, 'checkout']);
-Route::post('/checkout/place-order', [PizzaController::class, 'placeOrder']);
