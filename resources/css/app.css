@@ -1,0 +1,110 @@
+/* app.css */
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Стили для главной страницы */
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .pizza-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pizza-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .pizza-description {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .pizza-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #27ae60;
+  }
+  
+  /* Стили для страницы корзины */
+  .cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cart-item {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-item-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .cart-item-quantity {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .cart-item-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e67e22;
+  }
+  
+  /* Стили для страницы оформления заказа */
+  .checkout-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .checkout-form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .checkout-form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .checkout-form-submit {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
