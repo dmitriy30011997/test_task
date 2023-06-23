@@ -1,50 +1,52 @@
+<?php
 use App\Models\Pizza;
+use App\Models\Cart;
 use Illuminate\Http\Request;
 
 class PizzaController extends Controller
 {
     public function index()
     {
-        $pizzas = Pizza::all();
-        return view('index', compact('pizzas'));
+        $pizza = Pizza::all();
+        return view('index', compact('pizza'));
     }
 
     public function cart()
     {
-        // Логика отображения корзины
-        $cartItems = // Получение элементов корзины из базы данных или сеанса
+        $cartItems = Cart::all();
         return view('cart', compact('cartItems'));
     }
 
     public function addToCart(Request $request)
     {
-        // Логика добавления пиццы в корзину
         $pizzaId = $request->input('pizza_id');
         $quantity = $request->input('quantity');
         
-        // Добавление пиццы в корзину в базе данных или сеансе
+        // Логика добавления пиццы в корзину
+        $cartItem = new Cart();
+        $cartItem->pizza_id = $pizzaId;
+        $cartItem->quantity = $quantity;
+        $cartItem->save();
         
         return redirect()->route('cart')->with('success', 'Pizza added to cart');
     }
 
     public function removeFromCart(Request $request)
     {
-        // Логика удаления пиццы из корзины
         $itemId = $request->input('item_id');
         
-        // Удаление пиццы из корзины в базе данных или сеансе
+        // Логика удаления пиццы из корзины
+        Cart::destroy($itemId);
         
         return redirect()->route('cart')->with('success', 'Pizza removed from cart');
     }
 
     public function checkout()
     {
-        // Логика оформления заказа
-        $cartItems = // Получение элементов корзины из базы данных или сеанса
+        $cartItems = Cart::all(); 
         
-        // Подготовка данных для оформления заказа
+        // Логика подготовки данных для оформления заказа
         
         return view('checkout', compact('cartItems'));
     }
 }
-

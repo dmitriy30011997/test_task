@@ -20,7 +20,7 @@
             },
             mounted() {
                 // Получение списка пицц с сервера
-                axios.get('/api/pizzas')
+                axios.get('/api/pizza')
                     .then(response => {
                         this.pizzas = response.data;
                     })

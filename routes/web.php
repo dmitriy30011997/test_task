@@ -8,3 +8,6 @@ Route::get('/cart', [PizzaController::class, 'cart']);
 Route::post('/cart', [PizzaController::class, 'addToCart']);
 Route::post('/cart/remove', [PizzaController::class, 'removeFromCart']);
 Route::get('/checkout', [PizzaController::class, 'checkout']);
+
+// Маршрут для получения списка пицц в API
+Route::get('/api/pizza', [PizzaController::class, 'getPizzas']);
